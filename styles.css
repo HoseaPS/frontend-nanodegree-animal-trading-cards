@@ -1,0 +1,118 @@
+/* add your CSS here */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@-webkit-keyframes title-border {
+    0%   { -webkit-transform: scaleX(0); transform: scaleX(0); }
+    100% { -webkit-transform: scaleX(1); transform: scaleX(1); }
+}
+@keyframes title-border {
+    0%   { -webkit-transform: scaleX(0); transform: scaleX(0); }
+    100% { -webkit-transform: scaleX(1); transform: scaleX(1); }
+}
+ul, p {
+    margin: 0;
+}
+html {
+    background-image: -webkit-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: -o-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.animal-image {
+    width: 300px;
+    -webkit-box-shadow: 5px 5px 5px #9a9a9a;
+            box-shadow: 5px 5px 5px #9a9a9a;
+}
+.animal-card {
+    -webkit-transform: rotateX(60deg) scale(0.7);
+            transform: rotateX(60deg) scale(0.7);
+    -webkit-transition: -webkit-transform ease .3s;
+    transition: -webkit-transform ease .3s;
+    -o-transition: transform ease .3s;
+    transition: transform ease .3s;
+    transition: transform ease .3s, -webkit-transform ease .3s;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 20px 100px #9a9a9a;
+            box-shadow: 0px 20px 100px #9a9a9a;
+    cursor: pointer;
+    border: 0.1px solid #fff;
+}
+.animal-info ul li {
+    list-style: none;
+}
+.animal-info ul {
+    padding: 0;
+}
+.animal-info {
+    border: 10px solid #F3A530;
+    background-color: #fff;
+    padding: 25px;
+    margin-top: 15px;
+    line-height: 1.3;
+}
+.animal-card:hover {
+    -webkit-transform: rotate(0deg) scale(1) translateY(10px);
+        -ms-transform: rotate(0deg) scale(1) translateY(10px);
+            transform: rotate(0deg) scale(1) translateY(10px);
+}
+.animal-card-wrapper {
+    width: 470px;
+    margin: auto;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 793px;
+}
+div.animal-card:hover .card-title:before {
+    visibility: visible;
+    -webkit-animation: title-border .8s ease-in-out;
+            animation: title-border .8s ease-in-out;
+}
+h3.card-title::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 5px;
+    bottom: -10px;
+    background-color: #f3a530;
+    visibility: hidden; 
+}
+h3.card-title {
+    margin: 0px 0px 25px 0px;
+    text-align: center;
+    position: relative;
+    color: #F3A530;
+    font-size: 27px;
+    padding-top: 15px;
+}
+.animal-info ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.card-top-wrapper {
+    text-align: center;
+}
+.animal-info > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+.animal-card-wrapper::before {
+    content: "Passe o mouse em cima do card";
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 450px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #f3a530;
+    text-transform: lowercase;
+    margin-top: 150px;
+    text-shadow: 2px 2px 0px rgba(243, 165 , 48, 0.2);
+}
